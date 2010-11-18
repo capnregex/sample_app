@@ -1,22 +1,38 @@
 
 .container {
-  width: 710px;
+  width: 890px;
 }
 
 body {
-  background: #cff;
+  background: #006d50;
 }
 
 header {
-  padding-top: 20px;
+  position:relative;
+  margin-top: 20px;
+  background-color: #f6d8a6;
+  border:solid white 1px;
 }
 
-header img {
+header .logo {
   padding: 1em;
-  background: #fff;
+  margin-left:200px;
+}
+
+header nav {
+  position:absolute;
+  top:-20px;
+  right:0;
+}
+
+header .bread {
+  position:absolute;
+  top:0px;
+  left:0px;
 }
 
 section {
+  clear:both;
   margin-top: 1em;
   font-size: 120%;
   padding: 20px;
@@ -45,11 +61,6 @@ a:visited {
 /* Navigation */
 
 nav {
-  float: right;
-}
-
-nav {
-  background-color: white;
   padding: 0 0.7em;
   white-space: nowrap;
 }
@@ -68,10 +79,11 @@ nav ul li {
 nav ul li a {
   padding: 0 5px;
   font-weight: bold;
+  color: #fff;
 }
 
 nav ul li a:visited {
-  color: #09c;
+  color: #fff;
 }
 
 nav ul li a:hover {
@@ -111,7 +123,6 @@ a.signup_button {
 footer {
   text-align: center;
   margin-top: 10px;
-  width: 710px;
   margin-left: auto;
   margin-right: auto;
 }
