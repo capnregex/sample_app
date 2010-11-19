@@ -2,7 +2,7 @@ class IngredientTypesController < ApplicationController
   # GET /ingredient_types
   # GET /ingredient_types.xml
   def index
-    @ingredient_types = IngredientType.all
+    @ingredient_types = IngredientType.all :order => 'id'
 
     respond_to do |format|
       format.html # index.html.erb

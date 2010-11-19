@@ -1,10 +1,13 @@
-<p id="notice"><%= notice %></p>
+<nav>
+  <%= link_to 'List', ingredient_types_path %>
+  <%= link_to 'Edit', edit_ingredient_type_path(@ingredient_type) %>
+</nav>
 
-<p>
-  <b>Name:</b>
-  <%= @ingredient_type.name %>
-</p>
+<h1><%= @ingredient_type.name.pluralize %></h1>
 
+<ul>
+  <% @ingredient_type.ingredients.each do |ingredient| %>
+    <li><%= link_to ingredient.name, ingredient %></li>
+  <% end %>
+</ul>
 
-<%= link_to 'Edit', edit_ingredient_type_path(@ingredient_type) %> |
-<%= link_to 'Back', ingredient_types_path %>

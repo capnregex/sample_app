@@ -18,8 +18,10 @@ class CreateIngredients < ActiveRecord::Migration
       'Cookie' => %w(ChocolateChip ChoclolateChipWalnut OatmealRasin),
       'Soup' => %w(ChickenNoodle Potato Vegtable Ministroni)
     }
-    data.each_pair do |type,names|
+    types = %w(Bread Spread Meat Cheese Veggies Cookie Soup)
+    types.each do |type|
       it = IngredientType.create(:name => type)
+      names = data[type] || []
       names.each do |name|
         it.ingredients.create(:name => name)
       end

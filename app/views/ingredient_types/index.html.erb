@@ -1,23 +1,18 @@
-<h1>Listing ingredient_types</h1>
+<nav>
+  <%= link_to 'List', ingredient_types_path %>
+  <%= link_to 'New', new_ingredient_type_path %>
+</nav>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h1>Ingredient Types</h1>
 
-<% @ingredient_types.each do |ingredient_type| %>
-  <tr>
-    <td><%= ingredient_type.name %></td>
-    <td><%= link_to 'Show', ingredient_type %></td>
-    <td><%= link_to 'Edit', edit_ingredient_type_path(ingredient_type) %></td>
-    <td><%= link_to 'Destroy', ingredient_type, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<ul>
+  <% @ingredient_types.each do |it| %>
+    <li>
+      <b><%= link_to it, it %></b>:
+      <% it.ingredients.each do |i| %>
+        <%= link_to i,i %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
 
-<br />
-
-<%= link_to 'New Ingredient type', new_ingredient_type_path %>

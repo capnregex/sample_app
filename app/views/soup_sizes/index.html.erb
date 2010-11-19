@@ -1,0 +1,23 @@
+<h1>Listing soup_sizes</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @soup_sizes.each do |soup_size| %>
+  <tr>
+    <td><%= soup_size.name %></td>
+    <td><%= link_to 'Show', soup_size %></td>
+    <td><%= link_to 'Edit', edit_soup_size_path(soup_size) %></td>
+    <td><%= link_to 'Destroy', soup_size, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Soup size', new_soup_size_path %>

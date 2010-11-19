@@ -1,0 +1,21 @@
+<%= form_for(@soup_size) do |f| %>
+  <% if @soup_size.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@soup_size.errors.count, "error") %> prohibited this soup_size from being saved:</h2>
+
+      <ul>
+      <% @soup_size.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,4 +1,8 @@
 SampleApp::Application.routes.draw do
+  resources :soup_sizes
+
+  resources :sandwich_sizes
+
   resources :ingredients
 
   resources :ingredient_types

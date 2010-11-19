@@ -3,7 +3,7 @@
   width: 890px;
 }
 
-body {
+body, html {
   background: #006d50;
 }
 
@@ -21,7 +21,7 @@ header .logo {
 
 header nav {
   position:absolute;
-  top:-20px;
+  top:-1.6em;
   right:0;
 }
 
@@ -32,6 +32,7 @@ header .bread {
 }
 
 section {
+  position:relative;
   clear:both;
   margin-top: 1em;
   font-size: 120%;
@@ -41,6 +42,13 @@ section {
 
 section h1 {
   font-size: 200%;
+}
+
+section nav {
+  font-size: 83%;
+  position:absolute;
+  top:-1.3em;
+  right:0;
 }
 
 /* Links */
@@ -76,17 +84,17 @@ nav ul li {
   padding: 0.2em 0;
 }
 
-nav ul li a {
+nav a {
   padding: 0 5px;
   font-weight: bold;
   color: #fff;
 }
 
-nav ul li a:visited {
+nav a:visited {
   color: #fff;
 }
 
-nav ul li a:hover {
+nav a:hover {
   text-decoration: underline;
 }
 
