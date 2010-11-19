@@ -1,4 +1,8 @@
 SampleApp::Application.routes.draw do
+  resources :ingredients
+
+  resources :ingredient_types
+
   devise_for :users
   resources :users, :only => [:index, :show]
 

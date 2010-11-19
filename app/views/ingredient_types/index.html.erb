@@ -1,0 +1,23 @@
+<h1>Listing ingredient_types</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ingredient_types.each do |ingredient_type| %>
+  <tr>
+    <td><%= ingredient_type.name %></td>
+    <td><%= link_to 'Show', ingredient_type %></td>
+    <td><%= link_to 'Edit', edit_ingredient_type_path(ingredient_type) %></td>
+    <td><%= link_to 'Destroy', ingredient_type, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ingredient type', new_ingredient_type_path %>
